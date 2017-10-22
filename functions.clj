@@ -47,3 +47,15 @@
      (apply + numbers))
 ; => 6
 
+
+; closures
+(defn messenger-builder [greeting]
+  (fn [who] (print greeting who))) ; fn closes over greeting
+
+; greeting provided here, then goes out of scope
+(def hello-er (messenger-builder "Hello"))
+
+; greeting still available 'coz hello-er is closure
+(hello-er "world!")
+; Hello world!
+
