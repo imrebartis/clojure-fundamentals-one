@@ -71,4 +71,7 @@
 (hello-er "world!")
 ; Hello world!
 
+; invoking Java methods
+(.length "clojure") ; => 7
+
 
