@@ -21,6 +21,13 @@
 (messenger "Hi" "you" "little")
 ; => Hi (you little)
 
+(defn greet
+  ([name] (greet "Hello" name))
+  ([greeting name] (str greeting ", " name "!")))
+
+(greet "mo")
+; => "Hello, mo!"
+
 ; apply
 (let [a 1
       b 2
@@ -58,4 +65,5 @@
 ; greeting still available 'coz hello-er is closure
 (hello-er "world!")
 ; Hello world!
+
 
