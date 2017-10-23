@@ -54,6 +54,11 @@
      (apply + numbers))
 ; => 6
 
+(defn concat-strings [& strings]
+  (apply str strings))
+
+(concat-strings "one" "two" "three")
+; => "onetwothree"
 
 ; closures
 (defn messenger-builder [greeting]
