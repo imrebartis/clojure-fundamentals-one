@@ -73,5 +73,6 @@
 
 ; invoking Java methods
 (.length "clojure") ; => 7
+((fn [s] (.length s)) "clojure") ; => 7
 
 
