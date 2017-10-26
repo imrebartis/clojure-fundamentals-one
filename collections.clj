@@ -36,4 +36,12 @@ lst ; => (1 2)
 (dissoc {:a 1} :a) ; => {}
 (conj {} [:a 1]) ; => {:a 1}
 
+;nested maps:
 
+(def jdoe {:name "Jox", :address {:zip 27705}})
+
+(get-in jdoe [:address :zip])
+
+(assoc-in jdoe [:address :zip] 27514)
+
+(update-in jdoe [:address :zip] inc)
