@@ -36,3 +36,9 @@
   rest-names)
 
 
+; associative destructuring:
+
+(def m {:a 7 :b 4})
+(let [{a :a, b :b} m]
+  [a b]) ; => [7 4]
+
