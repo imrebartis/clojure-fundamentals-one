@@ -42,3 +42,8 @@
 (let [{a :a, b :b} m]
   [a b]) ; => [7 4]
 
+(def n {:a 8 :b 12})
+(let [{:keys [a b]} n]
+  [a b]) ; => [8 12]
+(let [{:keys [a b c]} n]
+  [a b c]) ; => [8 12 nil]
