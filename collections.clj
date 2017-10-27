@@ -50,3 +50,15 @@ lst ; => (1 2)
 
 (get-in jdoe [:address :suite] "Ste. 2")
 ; => "Ste. 2"
+
+
+; sets:
+#{:a :b}
+(#{:a :b} :a)
+(conj #{} :a)
+(contains? #{:a} :a)
+
+(require '[clojure.set :as set])
+(set/union #{:a} #{:b}) ; => #{:b :a}
+(set/difference #{:a :b} #{:a}) ; => #{:b}
+(set/intersection #{:a :b} #{:b :c}) ; => #{:b}
