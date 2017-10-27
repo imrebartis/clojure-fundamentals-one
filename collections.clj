@@ -42,6 +42,11 @@ lst ; => (1 2)
 
 (get-in jdoe [:address :zip])
 
+(get jdoe :age 21) ; => 21
+
 (assoc-in jdoe [:address :zip] 27514)
 
 (update-in jdoe [:address :zip] inc)
+
+(get-in jdoe [:address :suite] "Ste. 2")
+; => "Ste. 2"
