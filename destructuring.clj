@@ -47,3 +47,9 @@
   [a b]) ; => [8 12]
 (let [{:keys [a b c]} n]
   [a b c]) ; => [8 12 nil]
+
+; using 'or' to provide default values:
+(let [ {:keys [a b c]
+        :or {c 3}} n]
+  [a b c]) ; => [8 12 3]
+
