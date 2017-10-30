@@ -1,5 +1,5 @@
 (seq [1 2 3])
-;=> (1 2 3)
+;=> (1 2 3) ; not a list
 
 (first (seq [1 2 3]))
 ;=> 1
@@ -18,3 +18,11 @@
 
 (cons 1 [2 3])
 ;=> (1 2 3)
+
+; generating sequences:
+(seq [1 2 3]) ;=> (1 2 3) ; not a list
+(range) ; => (0 1 2 ... infinite
+(range 3); => (0 1 2)
+(range 1 7 2) ; => (1 3 5)
+(iterate #(* 2 %) 2) ; (2 4 8 16 ... infinite
+(re-seq #"[aeiou]" "clojure") ;=> ("o" "u" "e")
