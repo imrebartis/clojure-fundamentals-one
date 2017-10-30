@@ -34,3 +34,12 @@
 (map #(* % %) [0 1 2 3]) ;=> ((0 1 4 9)
 (filter even? (range)) ; => (0 2 4 6 ... infinite
 (apply str (interpose "," (range 3))) ;=> "0,1,2"
+
+; using a seq
+(reduce + (range 4)) ; => 6
+(reduce + 10 (range 4)) => 16
+(into #{} "hello") ; #{\e \h \l \o}
+(into {} [[:x 1] [:y 2]]) ; {:x 1, :y 2}
+(some {2 :b 3 :c} [1 nil 2 3]) ; :b
+
+
