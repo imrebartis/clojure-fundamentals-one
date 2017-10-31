@@ -18,4 +18,16 @@
 ; => false
 ;; odd
 
+(if-let [x (even? 2)]
+  (println x)
+  (println "odd"))
+; => true
+
+(defn show-evens [coll]
+  (if-let [evens (seq (filter even? coll))]
+    (println (str "The evens are: " evens))
+    (println "There were no evens.")))
+
+(show-evens [1 2 3 4]) ;=> The evens are: (2 4)
+
 
