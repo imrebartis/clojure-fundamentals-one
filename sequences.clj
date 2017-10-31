@@ -42,4 +42,13 @@
 (into {} [[:x 1] [:y 2]]) ; {:x 1, :y 2}
 (some {2 :b 3 :c} [1 nil 2 3]) ; :b
 
+; Fibonacci sequence:
+(def fibs
+  (map first
+    (iterate (fn [[a b]]
+             [b (+ a b)])
+             [0 1])))
 
+(take 5 fibs) ; => (0 1 1 2 3)
+; get the first 5 numbers added to 1:
+(map inc (take 5 fibs)) ; => (1 2 2 3 4)
