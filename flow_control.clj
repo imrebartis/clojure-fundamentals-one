@@ -31,3 +31,17 @@
 (show-evens [1 2 3 4]) ;=> The evens are: (2 4)
 
 
+; cond:
+(let [x 5]
+  (cond
+    (< x 2) "x is less than 2"
+    (< x 10) "x is less than 10"))
+; => "x is less than 10"
+
+(let [x 11]
+  (cond
+    (< x 2) "x is less than 2"
+    (< x 10) "x is less than 10"
+    :else "x is greater than or equal to 10"))
+;=> "x is greater than or equal to 10"
+
