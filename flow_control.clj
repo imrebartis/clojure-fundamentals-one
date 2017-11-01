@@ -115,3 +115,11 @@
     (recur (inc i))
     i))
 ; => 10
+
+; defn/recur
+(defn increase [i]
+  (if (< i 10)
+    (recur (inc i))
+    i))
+(increase 1)
+; => 10
