@@ -94,3 +94,11 @@
 ; 1
 ; 2
 ; => nil
+
+;dotimes
+(dotimes [i 3]
+  (println i))
+; 0
+; 1
+; 2
+; => nil
