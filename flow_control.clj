@@ -123,3 +123,24 @@
     i))
 (increase 1)
 ; => 10
+
+;recur
+(defn factorial
+  ([n] (factorial 1 n))
+  ([accum n]
+   (if (zero? n)
+     accum
+     (recur (*' accum n) (dec n)))))
+(factorial 5)
+; => 120
+
+;exception handling
+(try
+  (/ 2 1)
+  (catch ArithmeticException e
+    "divide by zero")
+  (finally
+    (println "cleanup")))
+; cleanup
+; => 2
+
