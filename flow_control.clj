@@ -86,3 +86,11 @@
     "unknown"))
 (str-binary 1)
 ; => "one"
+
+; doseq
+(doseq [n (range 3)]
+  (println n))
+; 0
+; 1
+; 2
+; => nil
