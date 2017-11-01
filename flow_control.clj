@@ -144,3 +144,8 @@
 ; cleanup
 ; => 2
 
+;throwing exceptions
+(try
+  (throw (Exception. "something went wrong"))
+  (catch Exception e (.getMessage e)))
+; => "something went wrong"
